@@ -44,7 +44,7 @@
         <!-- <a :href="url" target="_blank" rel="noopener noreferrer">The Net NInja</a> -->
         <div v-if="showBooks">
             <ul>
-                <li v-for="book in books" :class="{fav: book.isFav}">
+                <li v-for="book in books" :class="{fav: book.isFav}" @click="toggleFav(book)">
                     <img :src="book.img" :alt="book.title" style="height: 150px;width: 150px;">
                     <h4>{{book.title}}  </h4>
                     <p>{{book.author}}</p>
