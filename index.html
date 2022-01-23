@@ -13,9 +13,12 @@
     <h1>Hello, Vue</h1>
 
     <div id="app">
+        <!-- attribute binding  -->
+        <!-- <a :href="url" target="_blank" rel="noopener noreferrer">The Net NInja</a> -->
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in books">
+                    <img :src="book.img" :alt="book.title" >
                     <h4>{{book.title}} - {{book.author}}</h4>
                 </li>
             </ul>
